@@ -1,0 +1,25 @@
+{
+  "name": "lit-project",
+  "version": "1.0.0",
+  "description": "Base Lit project",
+  "author": "Leonardo Marrega",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "type": "module",
+  "keywords": [
+    "lit",
+    "base"
+  ],
+  "scripts": {
+    "watch": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vaadin/router": "^1.7.5",
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.2",
+    "vite": "^5.0.4"
+  }
+}
