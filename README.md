@@ -1,6 +1,6 @@
 # Lit Project
 
-Base project for a Lit based web application.
+Base project for a [Lit](https://github.com/lit/lit) based web application.
 
 ## Dependencies
 
@@ -36,7 +36,7 @@ lit-project/                                                # Project root
 │  ├─ app/                                                  # Application files
 │  │  ├─ components/                                        # Components
 │  │  |  ├─ example-component/                              # Component folder
-│  │  |  |  ├─ example-component.component.ts               # Component script
+│  │  |  |  ├─ example.component.ts                         # Component script
 │  │  ├─ services/                                          # Services
 │  │  |  ├─ example-service/                                # Service
 │  │  |  |  ├─ example.service.ts                           # Service script
@@ -130,7 +130,7 @@ This step sets up the basics for running a lit application with routing. It uses
 
     @customElement('app-root')
     export class AppRootComponent extends LitElement {
-      render() {
+      protected render() {
         return html`
           <header>
             <h2>Header</h2>
@@ -169,7 +169,7 @@ This step sets up the basics for running a lit application with routing. It uses
 
     @customElement('app-router')
     export class AppRouterComponent extends HTMLElement {
-      protected connectedCallback(): void {
+      public connectedCallback(): void {
         const router = new Router();
         router.setRoutes(routes);
         router.setOutlet(this);
@@ -188,7 +188,7 @@ This step sets up the basics for running a lit application with routing. It uses
 
     @customElement('app-home-view')
     export class HomeViewComponent extends LitElement {
-      render() {
+      protected render() {
         return html`
           <h1>Hello world!</h1>
         `;
@@ -202,7 +202,7 @@ This step sets up the basics for running a lit application with routing. It uses
 
     @customElement('app-not-found-view')
     export class NotFoundViewComponent extends LitElement {
-      render() {
+      protected render() {
         return html`
           <h1>Not found!</h1>
         `;

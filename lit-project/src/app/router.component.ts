@@ -18,7 +18,7 @@ const routes: Route[] = [
 
 @customElement('app-router')
 export class AppRouterComponent extends HTMLElement {
-  protected connectedCallback(): void {
+  public connectedCallback(): void {
     const router = new Router();
     router.setRoutes(routes);
     router.setOutlet(this);
